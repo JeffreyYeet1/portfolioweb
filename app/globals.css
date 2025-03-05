@@ -124,3 +124,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  scroll-padding-top: 80px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'newFont', sans-serif;
+  overscroll-behavior-y: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'newFont';
+  src: url('/fonts/ShipporiAntiqueB1-Regular') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
