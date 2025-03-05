@@ -140,7 +140,7 @@ body {
   font-family: 'newFont', sans-serif;
   overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 @font-face {

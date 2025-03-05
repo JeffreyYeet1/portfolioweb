@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { SiGithub } from 'react-icons/si';
 import { FiExternalLink } from 'react-icons/fi';
 import styles from '../../styles/project.module.css';
-
+import Image from 'next/image';
 const projects = [
   {
     title: "Wordle+",
@@ -90,7 +90,7 @@ export default function ProjectPage() {
             <FiExternalLink /> Link
           </a>
         </div>
-        <img src={project.image} alt={project.title} />
+        <Image src={project.image} alt={project.title} width={1000} height={1000} style={{ objectFit: 'cover' }} />
       </div>
 
       <div className={styles.projectContent}>

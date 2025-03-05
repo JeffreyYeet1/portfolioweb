@@ -1,12 +1,3 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  background-image: url('/images/crumpled_paper.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .container {
   width: 100%;
   overflow-x: hidden;
@@ -121,12 +112,12 @@ html, body {
 
 /* About Section */
 .about {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 8rem 2rem;
   background: #ffffff;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .aboutContent {

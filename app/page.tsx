@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, FormEvent } from 'react';
+import { useState, FormEvent } from 'react';
 import Link from 'next/link';
 import styles from './styles/home.module.css';
 import { 
@@ -18,10 +18,9 @@ import {
   SiGithub
 } from 'react-icons/si';
 import { FiDownload, FiFolder } from 'react-icons/fi';
-
+import Image from 'next/image';
 const Home = () => {
   const [activeProject, setActiveProject] = useState(0);
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
     name: '',
@@ -80,24 +79,6 @@ const Home = () => {
     },
   ];
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto-advance slides every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -132,6 +113,7 @@ const Home = () => {
       }
     } catch (error) {
       setFormStatus('error');
+      console.error('Error sending message:', error);
     }
   };
 
@@ -148,7 +130,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Hi, I'm Jeffrey Ye</h1>
+          <h1 className={styles.heroTitle}>Hi, I&apos;m Jeffrey Ye</h1>
           <p className={styles.heroSubtitle}>Full Stack Developer</p>
           <p className={styles.heroLocation}>Based in Toronto</p>
           <div className={styles.heroButtons}>
@@ -210,10 +192,13 @@ const Home = () => {
                 onMouseEnter={() => setActiveProject(index)}
               >
                 <div className={styles.projectImage}>
-                  <img 
+                  <Image 
                     src={project.image} 
                     alt={project.title}
                     className={styles.projectImageContent}
+                    width={1000}
+                    height={1000}
+                    style={{ objectFit: 'cover' }}
                   />
                 </div>
                 <div className={styles.projectInfo}>
@@ -243,11 +228,11 @@ const Home = () => {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutText}>
               <p>
-                I'm a passionate developer with a focus in building modern web applications.
+                I&apos;m a passionate developer with a focus in building modern web applications.
                 I love creating elegant solutions to complex problems and am always eager to learn new technologies.
               </p>
               <div className={styles.skills}>
-                <h3>I'm best when working with</h3>
+                <h3>I&apos;m best when working with</h3>
                 <div className={styles.skillTags}>
                   <span>
                     <SiReact />
@@ -294,10 +279,13 @@ const Home = () => {
             </div>
             <div className={styles.portraitContainer}>
               <div className={styles.aboutImage}>
-                <img 
+                <Image  
                   src="/images/regheadshot.jpg" 
                   alt="Portrait" 
                   className={styles.portrait}
+                  width={1000}
+                  height={1000}
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className={styles.portraitDate}>Nov 16th, 2024</div>
@@ -317,10 +305,13 @@ const Home = () => {
                 {galleryImages.map((image, index) => (
                   <div key={`first-${index}`} className={styles.carouselSlide}>
                     <div className={styles.carouselImage}>
-                      <img 
+                      <Image 
                         src={image.src} 
                         alt={image.alt}
                         className={styles.carouselImageContent}
+                        width={1000}
+                        height={1000}
+                        style={{ objectFit: 'cover' }}
                       />
                     </div>
                   </div>
@@ -329,10 +320,13 @@ const Home = () => {
                 {galleryImages.map((image, index) => (
                   <div key={`second-${index}`} className={styles.carouselSlide}>
                     <div className={styles.carouselImage}>
-                      <img 
+                      <Image 
                         src={image.src} 
                         alt={image.alt}
                         className={styles.carouselImageContent}
+                        width={1000}
+                        height={1000}
+                        style={{ objectFit: 'cover' }}
                       />
                     </div>
                   </div>
@@ -347,7 +341,7 @@ const Home = () => {
       <section id="contact" className={styles.contact}>
         <div className={styles.contactContent}>
           <p className={styles.contactText}>
-            I'm always interested in hearing about new projects and opportunities.
+            I&apos;m always interested in hearing about new projects and opportunities.
           </p>
           <form className={styles.contactForm} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
