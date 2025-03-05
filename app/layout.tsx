@@ -13,8 +13,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jeffrey Ye",
-  description: "Jeffrey Ye's portfolio website",
+  title: 'Portfolio | Software Engineer',
+  description: 'Software Engineer specializing in web development and creative solutions.',
+  openGraph: {
+    title: 'Portfolio | Software Engineer',
+    description: 'Software Engineer specializing in web development and creative solutions.',
+    images: [
+      {
+        url: '/images/og-image.jpg', // You'll need to add this image to your public/images folder
+        width: 1200,
+        height: 630,
+        alt: 'Portfolio Preview'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Portfolio | Software Engineer',
+    description: 'Software Engineer specializing in web development and creative solutions.',
+    images: ['/images/og-image.jpg']
+  }
 };
 
 export default function RootLayout({
