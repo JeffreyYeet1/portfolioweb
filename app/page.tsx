@@ -167,7 +167,7 @@ const Home = () => {
               <span>GitHub</span>
             </a>
             <a 
-              href="/resume.pdf" // 030325
+              href="/resume.pdf" // 030525
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.socialIcon}

@@ -13,10 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio | Software Engineer',
+  metadataBase: new URL('https://portfolioweb-beta-gray.vercel.app/'),
+  title: "Jeffrey Ye's portfolio",
   description: 'Software Engineer specializing in web development and creative solutions.',
   openGraph: {
-    title: 'Portfolio | Software Engineer',
+    title: "Jeffrey Ye's portfolio",
     description: 'Software Engineer specializing in web development and creative solutions.',
     images: [
       {
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | Software Engineer',
+    title: "Jeffrey Ye's portfolio",
     description: 'Software Engineer specializing in web development and creative solutions.',
     images: ['/images/og-image.jpg']
   }
