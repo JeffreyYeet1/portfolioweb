@@ -28,14 +28,14 @@ const projects = [
     websiteUrl: "https://www.youtube.com/watch?v=F-JwSP1WrHE"
   },
   {
-    title: "Project 3",
-    description: "A brief description of your third project",
-    image: "/images/projects/project3.jpg",
-    technologies: ["Python", "Django", "PostgreSQL"],
-    slug: "project-3",
-    fullDescription: "Detailed description of project 3 and its features.",
-    githubUrl: "https://github.com/jeffreyyeet1/project3",
-    websiteUrl: "https://project3.com"
+    title: "Clash of Plans",
+    description: "Productivity App with AI Assistant",
+    image: "/images/projects/clashofplans.png",
+    technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "Docker", "Cohere", "LangChain", "Google Calendar"],
+    slug: "clash-of-plans",
+    fullDescription: "A modern productivity app combining all your favourite scheduling platforms like Notion and Calendar into one. Integrating Google Calendar API and an AI assistant.",
+    githubUrl: "https://github.com/jeffreyyeet1/cop",
+    websiteUrl: "https://devpost.com/software/clash-of-plans?ref_content=my-projects-tab&ref_feature=my_projects"
   }
 ];
 

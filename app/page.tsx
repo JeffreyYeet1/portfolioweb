@@ -30,26 +30,26 @@ const Home = () => {
 
   const projects = [
     {
-      title: "MockMate",
-      description: "Personal AI Interview Assistant",
-      image: "/images/projects/mockmate.png",
-      technologies: ["Next.js", "TypeScript", "PostgreSQL", "AWS RDS", "Prisma", "Vercel"],
-      slug: "mockmate"
-    },
-    {
       title: "Wordle+",
       description: "Wordle, but more..",
       image: "/images/projects/wordleplus.png",
       technologies: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Docker", "Render"],
       slug: "wordle-plus"
     },
-    // {
-    //   title: "Project 3",
-    //   description: "My third project",
-    //   image: "/images/projects/project3.jpg",
-    //   technologies: ["Python", ],
-    //   slug: "project-3"
-    // }
+    {
+      title: "Clash of Plans",
+      description: "Productivity App with AI Assistant",
+      image: "/images/projects/clashofplans.png",
+      technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "Docker", "Cohere", "LangChain", "Google Calendar"],
+      slug: "clash-of-plans"
+    },
+    {
+      title: "MockMate",
+      description: "Personal AI Interview Assistant",
+      image: "/images/projects/mockmate.png",
+      technologies: ["Next.js", "TypeScript", "PostgreSQL", "AWS RDS", "Prisma", "Vercel"],
+      slug: "mockmate"
+    },
   ];
 
   const galleryImages = [
@@ -167,7 +167,7 @@ const Home = () => {
               <span>GitHub</span>
             </a>
             <a 
-              href="/resume.pdf" // 030525
+              href="/resume.pdf" // 032525
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.socialIcon}
